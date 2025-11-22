@@ -4,6 +4,7 @@ import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
 import Card from '../../components/base/Card';
 import Button from '../../components/base/Button';
+import FadeIn from '../../components/animations/FadeIn';
 import { coldPressedJuices, smoothies, blendedJuices, yogurtBowls, toasts } from '../../mocks/menuData';
 
 export default function Menu() {
@@ -93,8 +94,9 @@ export default function Menu() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredItems.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
-              {filteredItems.map((item) => (
-                <Card key={item.id} hover className="overflow-hidden h-full flex flex-col">
+              {filteredItems.map((item, index) => (
+                <FadeIn key={item.id} delay={index * 50}>
+                  <Card hover className="overflow-hidden h-full flex flex-col">
                   <div className="relative">
                     <img 
                       src={item.image} 
@@ -138,7 +140,8 @@ export default function Menu() {
                       Order Now
                     </Button>
                   </div>
-                </Card>
+                  </Card>
+                </FadeIn>
               ))}
             </div>
           ) : (

@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import Button from '../../../components/base/Button';
+import FadeIn from '../../../components/animations/FadeIn';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -90,19 +91,23 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 sm:pb-12 md:pb-16">
         <div className="text-center">
           {/* Category Label - Non-button style */}
-          <div className="mb-3 sm:mb-4">
-            <div className="inline-flex items-center gap-1.5 sm:gap-2">
-              <i className={`${currentSlideData.icon} text-lg sm:text-xl md:text-2xl text-white`}></i>
-              <span className="font-semibold text-base sm:text-lg md:text-xl text-white tracking-wide">
-                {currentSlideData.category}
-              </span>
+          <FadeIn delay={100} direction="down">
+            <div className="mb-3 sm:mb-4">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2">
+                <i className={`${currentSlideData.icon} text-lg sm:text-xl md:text-2xl text-white`}></i>
+                <span className="font-semibold text-base sm:text-lg md:text-xl text-white tracking-wide">
+                  {currentSlideData.category}
+                </span>
+              </div>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-5 md:mb-6 drop-shadow-lg leading-tight px-2">
-            {currentSlideData.title}
-          </h1>
+          <FadeIn delay={300}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-5 md:mb-6 drop-shadow-lg leading-tight px-2">
+              {currentSlideData.title}
+            </h1>
+          </FadeIn>
 
           {/* Labels - Mobile: Between title and description */}
           {currentSlideData.showLabels && (
@@ -120,21 +125,25 @@ export default function HeroSection() {
           )}
 
           {/* Description */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-4xl mx-auto drop-shadow-md px-4">
-            {currentSlideData.description}
-          </p>
+          <FadeIn delay={500}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-4xl mx-auto drop-shadow-md px-4">
+              {currentSlideData.description}
+            </p>
+          </FadeIn>
 
           {/* CTA Button - Only Explore Menu */}
-          <div className="flex justify-center mb-6 sm:mb-8">
-            <Button 
-              variant="primary" 
-              size="lg"
-              href="/menu"
-              icon={<i className="ri-restaurant-fill"></i>}
-            >
-              Explore Menu
-            </Button>
-          </div>
+          <FadeIn delay={700}>
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <Button 
+                variant="primary" 
+                size="lg"
+                href="/menu"
+                icon={<i className="ri-restaurant-fill"></i>}
+              >
+                Explore Menu
+              </Button>
+            </div>
+          </FadeIn>
 
           {/* Carousel Indicators */}
           <div className="flex justify-center gap-2 sm:gap-3">

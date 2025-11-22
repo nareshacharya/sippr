@@ -2,6 +2,7 @@
 import Card from '../../../components/base/Card';
 import Button from '../../../components/base/Button';
 import { useNavigate } from 'react-router-dom';
+import FadeIn from '../../../components/animations/FadeIn';
 
 export default function ProductCategoriesSection() {
   const navigate = useNavigate();
@@ -37,18 +38,21 @@ export default function ProductCategoriesSection() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-[#C34479]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-5 md:mb-6">
-            Our <span className="text-pink-100">Categories</span>
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4">
-            From cold-pressed juices to protein smoothies, we have something delicious 
-            and nutritious for every taste and lifestyle.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-5 md:mb-6">
+              Our <span className="text-pink-100">Categories</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4">
+              From cold-pressed juices to protein smoothies, we have something delicious 
+              and nutritious for every taste and lifestyle.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Mosaic Layout - Contained with rounded corners */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 rounded-2xl overflow-hidden">
+        <FadeIn delay={200}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 rounded-2xl overflow-hidden">
           {/* Row 1: Large + Small + Small */}
           <div className="md:row-span-2 relative group overflow-hidden cursor-pointer" onClick={() => navigate('/menu')}>
             <img 
@@ -120,9 +124,11 @@ export default function ProductCategoriesSection() {
               <Button variant="secondary" size="sm" className="text-xs">View Items</Button>
             </div>
           </div>
-        </div>
+          </div>
+        </FadeIn>
 
-        <div className="text-center mt-8 sm:mt-10 md:mt-12">
+        <FadeIn delay={400}>
+          <div className="text-center mt-8 sm:mt-10 md:mt-12">
           <Button 
             variant="secondary" 
             size="lg"
@@ -131,7 +137,8 @@ export default function ProductCategoriesSection() {
           >
             View Full Menu
           </Button>
-        </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
