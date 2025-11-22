@@ -36,9 +36,9 @@ export default function Navbar() {
 
   const isTransparent = isHomePage && !isScrolled;
   const navBgClass = isTransparent 
-    ? 'bg-black/20 backdrop-blur-sm' 
+    ? 'bg-transparent backdrop-blur-sm' 
     : 'bg-white shadow-lg';
-  const textColorClass = isTransparent ? 'text-white' : 'text-gray-700';
+  const textColorClass = isTransparent ? 'text-gray-800' : 'text-gray-700';
 
   return (
     <nav className={`${navBgClass} sticky top-0 z-50 transition-all duration-300 ${isTransparent ? 'pb-2' : ''}`}>
@@ -73,7 +73,11 @@ export default function Navbar() {
                   navigate(item.path);
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
-                className={`${textColorClass} hover:text-[#C34479] font-medium transition-colors duration-200 cursor-pointer whitespace-nowrap text-sm lg:text-base drop-shadow-sm`}
+                className={`font-medium transition-colors duration-200 cursor-pointer whitespace-nowrap text-sm lg:text-base drop-shadow-lg ${
+                  location.pathname === item.path
+                    ? 'text-[#C34479] border-b-2 border-[#C34479]'
+                    : `${textColorClass} hover:text-[#C34479]`
+                }`}
               >
                 {item.label}
               </button>
@@ -115,7 +119,7 @@ export default function Navbar() {
                   setIsMenuOpen(false);
                   window.scrollTo({ top: 0, behavior: 'instant' });
                 }}
-                className={`block w-full text-left px-4 py-3 ${textColorClass} hover:text-[#C34479] ${isTransparent ? 'hover:bg-white/10' : 'hover:bg-pink-50'} cursor-pointer whitespace-nowrap transition-colors duration-200`}
+                className={`block w-full text-left px-4 py-3 ${textColorClass} hover:text-[#C34479] ${isTransparent ? 'hover:bg-white/10' : 'hover:bg-pink-50'} cursor-pointer whitespace-nowrap transition-colors duration-200 drop-shadow-lg`}
               >
                 {item.label}
               </button>

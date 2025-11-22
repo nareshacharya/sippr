@@ -66,14 +66,14 @@ export default function Menu() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-4 sm:py-6 md:py-8 bg-white shadow-sm sticky top-16 sm:top-20 md:top-24 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+      <section className="py-4 sm:py-6 md:py-8 bg-white shadow-sm sticky top-[72px] sm:top-[80px] md:top-[96px] z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ml-20 sm:ml-28 md:ml-36">
+          <div className="flex flex-wrap justify-start gap-2 sm:gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 rounded-full font-semibold whitespace-nowrap cursor-pointer transition-all duration-200 flex items-center text-xs sm:text-sm md:text-base ${
+                className={`px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 rounded-full font-semibold whitespace-nowrap cursor-pointer transition-all duration-200 flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base ${
                   activeCategory === category.id
                     ? 'bg-[#C34479] text-white shadow-lg'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
