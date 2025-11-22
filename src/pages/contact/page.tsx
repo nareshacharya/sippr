@@ -120,13 +120,13 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-50 via-white to-green-50 py-24">
+      <section className="relative bg-gradient-to-br from-pink-50 via-white to-green-50 py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
               Get in <span className="text-[#C34479]">Touch</span>
             </h1>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4">
               Have questions about our juices, delivery, or nutrition? We're here to help! 
               Reach out to us through any of the channels below.
             </p>
@@ -135,7 +135,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
@@ -160,12 +160,12 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-green-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
                 Send Us a <span className="text-[#C34479]">Message</span>
               </h2>
               <p className="text-gray-600 mb-8">
@@ -333,13 +333,13 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
               Frequently Asked <span className="text-[#C34479]">Questions</span>
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               Quick answers to common questions about SIPPR
             </p>
           </div>
@@ -370,9 +370,9 @@ export default function ContactPage() {
       </section>
 
       {/* Social Media Section */}
-      <section className="py-20 bg-gradient-to-br from-pink-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-pink-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
             Follow Us on <span className="text-[#C34479]">Social Media</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">

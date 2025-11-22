@@ -53,12 +53,12 @@ export default function Menu() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="py-16 bg-[#C34479] text-white">
+      <section className="py-12 sm:py-14 md:py-16 bg-[#C34479] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span style={{ fontFamily: '"Pacifico", serif' }}>Menu</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6">
+            Our Menu
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed px-4">
             Discover our complete range of fresh, nutritious, and delicious offerings. 
             From cold-pressed juices to protein-packed smoothies and wholesome bowls.
           </p>
@@ -66,21 +66,22 @@ export default function Menu() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-white shadow-sm sticky top-16 z-40">
+      <section className="py-4 sm:py-6 md:py-8 bg-white shadow-sm sticky top-16 sm:top-20 md:top-24 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold whitespace-nowrap cursor-pointer transition-all duration-200 flex items-center ${
+                className={`px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 rounded-full font-semibold whitespace-nowrap cursor-pointer transition-all duration-200 flex items-center text-xs sm:text-sm md:text-base ${
                   activeCategory === category.id
                     ? 'bg-[#C34479] text-white shadow-lg'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                <i className={`${category.icon} mr-2`}></i>
-                {category.name}
+                <i className={`${category.icon} mr-1 sm:mr-2`}></i>
+                <span className="hidden sm:inline">{category.name}</span>
+                <span className="sm:hidden">{category.name.split(' ')[0]}</span>
               </button>
             ))}
           </div>
@@ -88,10 +89,10 @@ export default function Menu() {
       </section>
 
       {/* Menu Items */}
-      <section className="py-12">
+      <section className="py-8 sm:py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
               {filteredItems.map((item) => (
                 <Card key={item.id} hover className="overflow-hidden h-full flex flex-col">
                   <div className="relative">
@@ -151,16 +152,16 @@ export default function Menu() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-[#C34479]">
+      <section className="py-12 sm:py-14 md:py-16 bg-[#C34479]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-5 md:mb-6">
             Ready to Order?
           </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-7 md:mb-8 max-w-2xl mx-auto px-4">
             Contact us via WhatsApp for quick ordering or call us directly. 
             Fresh nutrition is just a message away!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button 
               variant="whatsapp"
               size="lg"

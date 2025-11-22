@@ -35,32 +35,32 @@ export default function ProductCategoriesSection() {
   ];
 
   return (
-    <section className="py-20 bg-[#C34479]">
+    <section className="py-12 sm:py-16 md:py-20 bg-[#C34479]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-5 md:mb-6">
             Our <span className="text-pink-100">Categories</span>
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto px-4">
             From cold-pressed juices to protein smoothies, we have something delicious 
             and nutritious for every taste and lifestyle.
           </p>
         </div>
 
         {/* Mosaic Layout - Contained with rounded corners */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 rounded-2xl overflow-hidden">
           {/* Row 1: Large + Small + Small */}
           <div className="md:row-span-2 relative group overflow-hidden cursor-pointer" onClick={() => navigate('/menu')}>
             <img 
               src={categories[0].image} 
               alt={categories[0].name}
-              className="w-full h-full object-cover object-top min-h-[400px] md:min-h-[600px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top min-h-[300px] sm:min-h-[400px] md:min-h-[600px] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{categories[0].name}</h3>
-              <p className="text-white/90 text-xl mb-6">{categories[0].description}</p>
-              <Button variant="secondary" size="md">View Items</Button>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">{categories[0].name}</h3>
+              <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-5 md:mb-6">{categories[0].description}</p>
+              <Button variant="secondary" size="sm" className="text-xs sm:text-sm">View Items</Button>
             </div>
           </div>
 
@@ -68,13 +68,13 @@ export default function ProductCategoriesSection() {
             <img 
               src={categories[1].image} 
               alt={categories[1].name}
-              className="w-full h-full object-cover object-top min-h-[300px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top min-h-[250px] sm:min-h-[300px] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-3">{categories[1].name}</h3>
-              <p className="text-white/90 text-base mb-4">{categories[1].description}</p>
-              <Button variant="secondary" size="sm">View Items</Button>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{categories[1].name}</h3>
+              <p className="text-white/90 text-xs sm:text-sm md:text-base mb-3 sm:mb-4">{categories[1].description}</p>
+              <Button variant="secondary" size="sm" className="text-xs">View Items</Button>
             </div>
           </div>
 
@@ -82,13 +82,13 @@ export default function ProductCategoriesSection() {
             <img 
               src={categories[2].image} 
               alt={categories[2].name}
-              className="w-full h-full object-cover object-top min-h-[300px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top min-h-[250px] sm:min-h-[300px] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-3">{categories[2].name}</h3>
-              <p className="text-white/90 text-base mb-4">{categories[2].description}</p>
-              <Button variant="secondary" size="sm">View Items</Button>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{categories[2].name}</h3>
+              <p className="text-white/90 text-xs sm:text-sm md:text-base mb-3 sm:mb-4">{categories[2].description}</p>
+              <Button variant="secondary" size="sm" className="text-xs">View Items</Button>
             </div>
           </div>
 
@@ -97,13 +97,13 @@ export default function ProductCategoriesSection() {
             <img 
               src={categories[3].image} 
               alt={categories[3].name}
-              className="w-full h-full object-cover object-top min-h-[300px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top min-h-[250px] sm:min-h-[300px] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-3">{categories[3].name}</h3>
-              <p className="text-white/90 text-base mb-4">{categories[3].description}</p>
-              <Button variant="secondary" size="sm">View Items</Button>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{categories[3].name}</h3>
+              <p className="text-white/90 text-xs sm:text-sm md:text-base mb-3 sm:mb-4">{categories[3].description}</p>
+              <Button variant="secondary" size="sm" className="text-xs">View Items</Button>
             </div>
           </div>
 
@@ -111,18 +111,18 @@ export default function ProductCategoriesSection() {
             <img 
               src={categories[4].image} 
               alt={categories[4].name}
-              className="w-full h-full object-cover object-top min-h-[300px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-top min-h-[250px] sm:min-h-[300px] transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-3">{categories[4].name}</h3>
-              <p className="text-white/90 text-base mb-4">{categories[4].description}</p>
-              <Button variant="secondary" size="sm">View Items</Button>
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6 text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{categories[4].name}</h3>
+              <p className="text-white/90 text-xs sm:text-sm md:text-base mb-3 sm:mb-4">{categories[4].description}</p>
+              <Button variant="secondary" size="sm" className="text-xs">View Items</Button>
             </div>
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-10 md:mt-12">
           <Button 
             variant="secondary" 
             size="lg"

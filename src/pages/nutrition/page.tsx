@@ -81,18 +81,18 @@ export default function NutritionPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-50 via-white to-green-50 py-24">
+      <section className="relative bg-gradient-to-br from-pink-50 via-white to-green-50 py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
                 Nutrition That <span className="text-[#C34479]">Powers</span> Your Life
               </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-7 md:mb-8 leading-relaxed">
                 Every SIPPR juice is carefully crafted to deliver maximum nutrition without compromise. 
                 We believe in the power of real, whole ingredients to transform your health and energy.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <Button 
                   variant="primary"
                   href="https://wa.me/918309209564"
@@ -112,7 +112,7 @@ export default function NutritionPage() {
               <img 
                 src="https://readdy.ai/api/search-image?query=Vibrant%20cold%20pressed%20juice%20bottles%20with%20fresh%20fruits%20and%20vegetables%20surrounding%20them%2C%20colorful%20healthy%20drinks%2C%20nutritious%20ingredients%2C%20clean%20white%20background%2C%20professional%20food%20photography%2C%20appealing%20presentation&width=600&height=700&seq=nutritionhero&orientation=portrait"
                 alt="Nutritious cold-pressed juices"
-                className="rounded-3xl shadow-2xl object-cover object-top w-full h-[500px]"
+                className="rounded-3xl shadow-2xl object-cover object-top w-full min-h-[300px] sm:min-h-[400px] md:h-[500px]"
               />
             </div>
           </div>
@@ -120,10 +120,10 @@ export default function NutritionPage() {
       </section>
 
       {/* Health Benefits Section */}
-      <section id="benefits" className="py-20 bg-white">
+      <section id="benefits" className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
               Health <span className="text-[#C34479]">Benefits</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

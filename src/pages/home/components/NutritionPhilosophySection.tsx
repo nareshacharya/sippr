@@ -1,43 +1,43 @@
 
 export default function NutritionPhilosophySection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
+          <div className="order-2 lg:order-1">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
               Our Nutrition <span className="text-[#C34479]">Philosophy</span>
             </h2>
-            <div className="space-y-6">
-              <div className="bg-pink-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6">
+              <div className="bg-pink-50 p-4 sm:p-5 md:p-6 rounded-2xl">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
                   <i className="ri-heart-pulse-fill text-red-500 mr-2"></i>
                   Health Without Compromise
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   Nutrition should never come at the cost of health. At SIPPR, we don't add sugar, water, 
                   preservatives or concentrate. Everything is cold-pressed or freshly made to give your body 
                   clean, real energy.
                 </p>
               </div>
               
-              <div className="bg-green-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+              <div className="bg-green-50 p-4 sm:p-5 md:p-6 rounded-2xl">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
                   <i className="ri-rainbow-fill text-[#C34479] mr-2"></i>
                   Exciting Combinations Promise
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   Healthy food shouldn't be boring. SIPPR creates combinations that delight your taste buds 
                   while energizing your day. Every sip is an adventure in flavor and nutrition.
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+              <div className="bg-blue-50 p-4 sm:p-5 md:p-6 rounded-2xl">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">
                   <i className="ri-leaf-fill text-green-500 mr-2"></i>
                   Pure Ingredients Promise
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   Fresh, real, unprocessed ingredients sourced with care. No shortcuts, no artificial flavors, 
                   just nature's goodness delivered in every glass.
                 </p>
@@ -45,16 +45,16 @@ export default function NutritionPhilosophySection() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <img 
               src="https://readdy.ai/api/search-image?query=Modern%20juice%20bar%20with%20fresh%20fruits%20and%20vegetables%20being%20prepared%2C%20cold%20press%20machine%20in%20action%2C%20natural%20ingredients%20displayed%20beautifully%2C%20clean%20kitchen%20environment%2C%20healthy%20food%20preparation%20process&width=600&height=500&seq=31&orientation=portrait"
               alt="Fresh ingredients and cold press process"
-              className="rounded-2xl shadow-2xl object-cover object-top w-full h-96"
+              className="rounded-2xl shadow-2xl object-cover object-top w-full min-h-[300px] sm:min-h-[350px] md:h-96"
             />
-            <div className="absolute -bottom-6 -right-6 bg-[#C34479] text-white p-4 rounded-2xl shadow-xl">
+            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#C34479] text-white p-3 sm:p-4 rounded-2xl shadow-xl">
               <div className="text-center">
-                <div className="text-2xl font-bold">100%</div>
-                <div className="text-sm">Natural</div>
+                <div className="text-xl sm:text-2xl font-bold">100%</div>
+                <div className="text-xs sm:text-sm">Natural</div>
               </div>
             </div>
           </div>

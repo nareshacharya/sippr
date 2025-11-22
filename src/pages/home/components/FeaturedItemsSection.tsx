@@ -23,18 +23,18 @@ export default function FeaturedItemsSection() {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-5 md:mb-6">
             Featured <span className="text-[#C34479]">Favorites</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Our most popular items loved by customers for their incredible taste and nutrition benefits.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {featuredItems.map((item) => (
             <Card key={item.id} hover className="overflow-hidden">
               <div className="relative">
@@ -50,8 +50,8 @@ export default function FeaturedItemsSection() {
                 )}
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
+              <div className="p-4 sm:p-5 md:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">{item.name}</h3>
                 
                 <div className="flex flex-wrap gap-1 mb-3">
                   {item.tags.map((tag, index) => (
@@ -62,10 +62,10 @@ export default function FeaturedItemsSection() {
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm text-gray-600 mb-2">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-2">
                     <strong>Ingredients:</strong> {item.ingredients.join(', ')}
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-600">
                     <strong>Benefits:</strong> {item.benefits.join(', ')}
                   </p>
                 </div>

@@ -71,31 +71,61 @@ export default function HeroSection() {
         </div>
       ))}
       
+      {/* Floating badges - Desktop: Top area, above gradient */}
+      {currentSlideData.showLabels && (
+        <div className="absolute top-16 sm:top-20 md:top-24 lg:top-28 left-1/2 transform -translate-x-1/2 z-20 hidden sm:flex flex-wrap justify-center gap-2 md:gap-3 px-4">
+          <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg">
+            <span className="text-xs md:text-sm font-semibold text-green-600 whitespace-nowrap">✓ No Added Sugar</span>
+          </div>
+          <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg">
+            <span className="text-xs md:text-sm font-semibold text-blue-600 whitespace-nowrap">✓ No Added Water</span>
+          </div>
+          <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg">
+            <span className="text-xs md:text-sm font-semibold text-purple-600 whitespace-nowrap">✓ Not from Concentrate</span>
+          </div>
+        </div>
+      )}
+
       {/* Content - Bottom Aligned */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 sm:pb-12 md:pb-16">
         <div className="text-center">
           {/* Category Label - Non-button style */}
-          <div className="mb-4">
-            <div className="inline-flex items-center gap-2">
-              <i className={`${currentSlideData.icon} text-2xl text-white`}></i>
-              <span className="font-semibold text-xl text-white tracking-wide">
+          <div className="mb-3 sm:mb-4">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2">
+              <i className={`${currentSlideData.icon} text-lg sm:text-xl md:text-2xl text-white`}></i>
+              <span className="font-semibold text-base sm:text-lg md:text-xl text-white tracking-wide">
                 {currentSlideData.category}
               </span>
             </div>
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-5 md:mb-6 drop-shadow-lg leading-tight px-2">
             {currentSlideData.title}
           </h1>
 
+          {/* Labels - Mobile: Between title and description */}
+          {currentSlideData.showLabels && (
+            <div className="flex flex-wrap justify-center gap-2 mb-4 sm:hidden">
+              <div className="bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-lg">
+                <span className="text-xs font-semibold text-green-600 whitespace-nowrap">✓ No Added Sugar</span>
+              </div>
+              <div className="bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-lg">
+                <span className="text-xs font-semibold text-blue-600 whitespace-nowrap">✓ No Added Water</span>
+              </div>
+              <div className="bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-lg">
+                <span className="text-xs font-semibold text-purple-600 whitespace-nowrap">✓ Not from Concentrate</span>
+              </div>
+            </div>
+          )}
+
           {/* Description */}
-          <p className="text-xl md:text-2xl text-gray-100 mb-10 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-4xl mx-auto drop-shadow-md px-4">
             {currentSlideData.description}
           </p>
 
           {/* CTA Button - Only Explore Menu */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6 sm:mb-8">
             <Button 
               variant="primary" 
               size="lg"
@@ -107,51 +137,38 @@ export default function HeroSection() {
           </div>
 
           {/* Carousel Indicators */}
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-2 sm:gap-3">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 cursor-pointer ${
                   index === currentSlide 
                     ? 'bg-white shadow-lg' 
                     : 'bg-white/50 hover:bg-white/75'
                 }`}
+                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* Floating badges - Only show for juice slide */}
-      {currentSlideData.showLabels && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <span className="text-sm font-semibold text-green-600">✓ No Added Sugar</span>
-            </div>
-            <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <span className="text-sm font-semibold text-blue-600">✓ No Added Water</span>
-            </div>
-            <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <span className="text-sm font-semibold text-purple-600">✓ Not from Concentrate</span>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Navigation Arrows */}
       <button
         onClick={() => goToSlide(currentSlide === 0 ? slides.length - 1 : currentSlide - 1)}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        aria-label="Previous slide"
       >
-        <i className="ri-arrow-left-line text-xl"></i>
+        <i className="ri-arrow-left-line text-lg sm:text-xl"></i>
       </button>
       <button
         onClick={() => goToSlide((currentSlide + 1) % slides.length)}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        aria-label="Next slide"
       >
-        <i className="ri-arrow-right-line text-xl"></i>
+        <i className="ri-arrow-right-line text-lg sm:text-xl"></i>
       </button>
     </section>
   );
