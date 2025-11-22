@@ -36,7 +36,7 @@ export default function Navbar() {
 
   const isTransparent = isHomePage && !isScrolled;
   const navBgClass = isTransparent 
-    ? 'bg-transparent backdrop-blur-sm' 
+    ? 'bg-black/20 backdrop-blur-sm' 
     : 'bg-white shadow-lg';
   const textColorClass = isTransparent ? 'text-white' : 'text-gray-700';
 
