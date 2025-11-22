@@ -43,9 +43,9 @@ export default function Navbar() {
   return (
     <nav className={`${navBgClass} sticky top-0 z-50 transition-all duration-300 ${isTransparent ? 'pb-2' : ''}`}>
       {/* Logo - Absolute positioned, sticking out */}
-      <div className="absolute left-2 sm:left-4 md:left-8 z-50" style={{ top: '-6px' }}>
+      <div className="absolute left-2 sm:left-4 md:left-8 z-50" style={{ top: '2px' }}>
         <div 
-          className="bg-white rounded-b-full p-2 sm:p-3 md:p-4 shadow-2xl w-18 h-18 sm:w-28 sm:h-28 md:w-36 md:h-36 flex items-center justify-center cursor-pointer transition-all duration-300"
+          className="bg-white rounded-b-full p-1 sm:p-1.5 md:p-2 shadow-2xl w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 flex items-center justify-center cursor-pointer transition-all duration-300"
           onClick={() => {
             navigate('/');
             window.scrollTo({ top: 0, behavior: 'instant' });

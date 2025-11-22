@@ -66,7 +66,7 @@ export default function Menu() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-4 sm:py-6 md:py-8 bg-white shadow-sm sticky top-[72px] sm:top-[80px] md:top-[96px] z-40">
+      <section className="py-4 sm:py-6 md:py-8 bg-white shadow-sm sticky top-[46px] sm:top-[54px] md:top-[62px] z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ml-20 sm:ml-28 md:ml-36">
           <div className="flex flex-wrap justify-start gap-2 sm:gap-3">
             {categories.map((category) => (
