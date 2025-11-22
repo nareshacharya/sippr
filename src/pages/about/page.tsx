@@ -75,10 +75,10 @@ export default function About() {
       <section 
         className="py-12 sm:py-16 md:py-20 bg-cover bg-center bg-no-repeat relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://readdy.ai/api/search-image?query=Modern%20healthy%20juice%20bar%20interior%20with%20fresh%20fruits%20vegetables%20and%20cold%20press%20equipment%2C%20bright%20natural%20lighting%2C%20welcoming%20atmosphere%2C%20SIPPR%20brand%20story%20background&width=1200&height=600&seq=35&orientation=landscape')`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&h=600&fit=crop')`
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex items-center justify-center min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex items-center justify-center min-h-[300px] sm:min-h-[400px] md:min-h-[500px] relative z-10">
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6">
               About <span className="text-pink-400">SIPPR</span>
