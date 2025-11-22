@@ -24,6 +24,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: cp public/.nojekyll out/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:
