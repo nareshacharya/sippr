@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to gh-pages
 
 on:
   push:
@@ -7,13 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
+    
     steps:
       - uses: actions/checkout@v4
 
@@ -24,10 +18,9 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-      - run: cp public/.nojekyll out/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./out
-
-      - uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
