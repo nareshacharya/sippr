@@ -52,7 +52,7 @@ export default function Navbar() {
           }}
         >
           <img 
-            src="/sippr-logo.svg" 
+            src="./sippr-logo.svg" 
             alt="SIPPR Logo" 
             className="h-12 w-12 sm:h-16 sm:w-16 md:h-24 md:w-24 object-contain"
           />
